@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   root 'topics#index'
-  # get 'about',to 'topics#about'
+  get 'about' => 'topics#about'
   resources :topics do
     member do
       post 'upvote'
       post 'downvote'
-      # get 'about'
       # get 'about', to 'topics#about'
     end
   end
